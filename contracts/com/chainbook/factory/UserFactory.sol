@@ -1,18 +1,14 @@
 pragma solidity ^0.4.20;
 pragma experimental ABIEncoderV2;
 
-import './UserLibrary.sol';
-import './AccountBook.sol';
+import "../model/library/UserLibrary.sol";
+import "../model/struct/AccountBook.sol";
+import "../model/struct/User.sol";
 
 // 文峰是智障!!
 contract UserFactory {
-    struct User {
-        string openid;
-        string userName;
-        AccountBook.Book[] books;
-    }
-    
-    using UserLibrary for User
+
+    using UserLibrary for User;
 
     mapping (string => User) users;
 
