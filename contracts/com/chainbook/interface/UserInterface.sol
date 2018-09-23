@@ -1,7 +1,7 @@
 pragma solidity ^0.4.20;
 pragma experimental ABIEncoderV2;
 
-import '../factory/UserFactory.sol';
+import "../factory/UserFactory.sol";
 import "../model/struct/User.sol";
 
 contract UserInterface is UserFactory {
@@ -18,7 +18,7 @@ contract UserInterface is UserFactory {
     }
 
     function getUserBooksByOpenId(string openid) public returns(string[10]) {
-        User storage user = users[openid];
+        User.SUser storage user = users[openid];
         string[10] arrays;
         for(uint i = 0;i < user.books.length; i++) {
             arrays[i] = user.books[i].bookName;

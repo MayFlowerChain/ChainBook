@@ -8,12 +8,16 @@ import "../model/struct/User.sol";
 // 文峰是智障!!
 contract UserFactory {
 
-    using UserLibrary for User;
+    using UserLibrary for User.SUser;
 
-    mapping (string => User) users;
+    mapping (string => User.SUser) users;
 
     function createUser(string _openid, string _userName) public {
         users[_openid].openid = _openid;
         users[_openid].userName = _userName;
+    }
+
+    function getUserById(string _openid) public view returns (string) {
+        return users[_openid].userName;
     }
 }

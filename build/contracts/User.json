@@ -1,0 +1,323 @@
+{
+  "contractName": "User",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820cea877c3b0d8ed1ced70a05d59047cde872d7db7a0542db05bb7d347f8bbd6fb0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820cea877c3b0d8ed1ced70a05d59047cde872d7db7a0542db05bb7d347f8bbd6fb0029",
+  "sourceMap": "59:125:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:125:5;;;;;;;",
+  "deployedSourceMap": "59:125:5:-;;;;;",
+  "source": " pragma solidity ^0.4.20;\n \n import \"./AccountBook.sol\";\n\n contract User {\n    struct SUser {\n        string openid;\n        string userName;\n        AccountBook.Book[] books;\n    }\n }\n",
+  "sourcePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/User.sol",
+  "ast": {
+    "absolutePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/User.sol",
+    "exportedSymbols": {
+      "User": [
+        254
+      ]
+    },
+    "id": 255,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 244,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:5"
+      },
+      {
+        "absolutePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/AccountBook.sol",
+        "file": "./AccountBook.sol",
+        "id": 245,
+        "nodeType": "ImportDirective",
+        "scope": 255,
+        "sourceUnit": 243,
+        "src": "29:27:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 254,
+        "linearizedBaseContracts": [
+          254
+        ],
+        "name": "User",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "User.SUser",
+            "id": 253,
+            "members": [
+              {
+                "constant": false,
+                "id": 247,
+                "name": "openid",
+                "nodeType": "VariableDeclaration",
+                "scope": 253,
+                "src": "102:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 246,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "102:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 249,
+                "name": "userName",
+                "nodeType": "VariableDeclaration",
+                "scope": 253,
+                "src": "125:15:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 248,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "125:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 252,
+                "name": "books",
+                "nodeType": "VariableDeclaration",
+                "scope": 253,
+                "src": "150:24:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Book_$241_storage_$dyn_storage_ptr",
+                  "typeString": "struct AccountBook.Book[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 250,
+                    "name": "AccountBook.Book",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 241,
+                    "src": "150:16:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Book_$241_storage_ptr",
+                      "typeString": "struct AccountBook.Book"
+                    }
+                  },
+                  "id": 251,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "150:18:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Book_$241_storage_$dyn_storage_ptr",
+                    "typeString": "struct AccountBook.Book[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "SUser",
+            "nodeType": "StructDefinition",
+            "scope": 254,
+            "src": "79:102:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 255,
+        "src": "59:125:5"
+      }
+    ],
+    "src": "1:184:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/User.sol",
+    "exportedSymbols": {
+      "User": [
+        254
+      ]
+    },
+    "id": 255,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 244,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:24:5"
+      },
+      {
+        "absolutePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/AccountBook.sol",
+        "file": "./AccountBook.sol",
+        "id": 245,
+        "nodeType": "ImportDirective",
+        "scope": 255,
+        "sourceUnit": 243,
+        "src": "29:27:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 254,
+        "linearizedBaseContracts": [
+          254
+        ],
+        "name": "User",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "User.SUser",
+            "id": 253,
+            "members": [
+              {
+                "constant": false,
+                "id": 247,
+                "name": "openid",
+                "nodeType": "VariableDeclaration",
+                "scope": 253,
+                "src": "102:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 246,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "102:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 249,
+                "name": "userName",
+                "nodeType": "VariableDeclaration",
+                "scope": 253,
+                "src": "125:15:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 248,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "125:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 252,
+                "name": "books",
+                "nodeType": "VariableDeclaration",
+                "scope": 253,
+                "src": "150:24:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Book_$241_storage_$dyn_storage_ptr",
+                  "typeString": "struct AccountBook.Book[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 250,
+                    "name": "AccountBook.Book",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 241,
+                    "src": "150:16:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Book_$241_storage_ptr",
+                      "typeString": "struct AccountBook.Book"
+                    }
+                  },
+                  "id": 251,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "150:18:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Book_$241_storage_$dyn_storage_ptr",
+                    "typeString": "struct AccountBook.Book[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "SUser",
+            "nodeType": "StructDefinition",
+            "scope": 254,
+            "src": "79:102:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 255,
+        "src": "59:125:5"
+      }
+    ],
+    "src": "1:184:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-23T12:58:50.700Z"
+}

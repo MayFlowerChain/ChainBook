@@ -1,24 +1,24 @@
 {
   "contractName": "AccountBook",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50604380601d6000396000f3006080604052600080fd00a265627a7a723058203ce3581cad0ed1843d53d91bd37897427ba65071295024ec04c6b9c99cc5e6986c6578706572696d656e74616cf50037",
-  "deployedBytecode": "0x6080604052600080fd00a265627a7a723058203ce3581cad0ed1843d53d91bd37897427ba65071295024ec04c6b9c99cc5e6986c6578706572696d656e74616cf50037",
-  "sourceMap": "60:73:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:73:0;;;;;;;",
-  "deployedSourceMap": "60:73:0:-;;;;;",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604380601d6000396000f3006080604052600080fd00a265627a7a72305820489da146d50903766ae19b60465cbf60037cdda83b744306f0550a1eacc7f8df6c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x6080604052600080fd00a265627a7a72305820489da146d50903766ae19b60465cbf60037cdda83b744306f0550a1eacc7f8df6c6578706572696d656e74616cf50037",
+  "sourceMap": "60:73:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:73:4;;;;;;;",
+  "deployedSourceMap": "60:73:4:-;;;;;",
   "source": "pragma solidity ^0.4.20;\npragma experimental ABIEncoderV2;\n\ncontract AccountBook {\n    struct Book {\n        string bookName;\n    }\n}",
-  "sourcePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+  "sourcePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/AccountBook.sol",
   "ast": {
-    "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+    "absolutePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/AccountBook.sol",
     "exportedSymbols": {
       "AccountBook": [
-        6
+        242
       ]
     },
-    "id": 7,
+    "id": 243,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 237,
         "literals": [
           "solidity",
           "^",
@@ -26,16 +26,16 @@
           ".20"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:0"
+        "src": "0:24:4"
       },
       {
-        "id": 2,
+        "id": 238,
         "literals": [
           "experimental",
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "25:33:0"
+        "src": "25:33:4"
       },
       {
         "baseContracts": [],
@@ -43,24 +43,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6,
+        "id": 242,
         "linearizedBaseContracts": [
-          6
+          242
         ],
         "name": "AccountBook",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "AccountBook.Book",
-            "id": 5,
+            "id": 241,
             "members": [
               {
                 "constant": false,
-                "id": 4,
+                "id": 240,
                 "name": "bookName",
                 "nodeType": "VariableDeclaration",
-                "scope": 5,
-                "src": "109:15:0",
+                "scope": 241,
+                "src": "109:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -68,10 +68,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 3,
+                  "id": 239,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "109:6:0",
+                  "src": "109:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -83,29 +83,29 @@
             ],
             "name": "Book",
             "nodeType": "StructDefinition",
-            "scope": 6,
-            "src": "87:44:0",
+            "scope": 242,
+            "src": "87:44:4",
             "visibility": "public"
           }
         ],
-        "scope": 7,
-        "src": "60:73:0"
+        "scope": 243,
+        "src": "60:73:4"
       }
     ],
-    "src": "0:133:0"
+    "src": "0:133:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+    "absolutePath": "/Users/wangbin/Documents/workspace/chainbook/contracts/com/chainbook/model/struct/AccountBook.sol",
     "exportedSymbols": {
       "AccountBook": [
-        6
+        242
       ]
     },
-    "id": 7,
+    "id": 243,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 237,
         "literals": [
           "solidity",
           "^",
@@ -113,16 +113,16 @@
           ".20"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:0"
+        "src": "0:24:4"
       },
       {
-        "id": 2,
+        "id": 238,
         "literals": [
           "experimental",
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "25:33:0"
+        "src": "25:33:4"
       },
       {
         "baseContracts": [],
@@ -130,24 +130,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6,
+        "id": 242,
         "linearizedBaseContracts": [
-          6
+          242
         ],
         "name": "AccountBook",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "AccountBook.Book",
-            "id": 5,
+            "id": 241,
             "members": [
               {
                 "constant": false,
-                "id": 4,
+                "id": 240,
                 "name": "bookName",
                 "nodeType": "VariableDeclaration",
-                "scope": 5,
-                "src": "109:15:0",
+                "scope": 241,
+                "src": "109:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -155,10 +155,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 3,
+                  "id": 239,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "109:6:0",
+                  "src": "109:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -170,22 +170,29 @@
             ],
             "name": "Book",
             "nodeType": "StructDefinition",
-            "scope": 6,
-            "src": "87:44:0",
+            "scope": 242,
+            "src": "87:44:4",
             "visibility": "public"
           }
         ],
-        "scope": 7,
-        "src": "60:73:0"
+        "scope": 243,
+        "src": "60:73:4"
       }
     ],
-    "src": "0:133:0"
+    "src": "0:133:4"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf3386a7f58bac4ac630bdabc43663e361528f717",
+      "transactionHash": "0x2f4fc9628f6781dbbfdd513b1733235b39af90f691f7f7d2a1c8857ed2e33d1e"
+    }
+  },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-22T10:27:14.044Z"
+  "updatedAt": "2018-09-23T12:58:50.700Z"
 }
