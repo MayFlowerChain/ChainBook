@@ -12,7 +12,7 @@ contract UserFactory {
         AccountBook.Book[] books;
     }
     
-    using UserLibrary for User;
+    using UserLibrary for User
 
     mapping (string => User) users;
 
