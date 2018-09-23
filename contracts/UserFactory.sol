@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 import './UserLibrary.sol';
 import './AccountBook.sol';
 
-// 文峰是智障
+// 文峰是智障!!
 contract UserFactory {
     struct User {
         string openid;
