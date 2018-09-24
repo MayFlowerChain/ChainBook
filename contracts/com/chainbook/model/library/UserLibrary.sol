@@ -6,6 +6,6 @@ import '../struct/User.sol';
 
 library UserLibrary {
     function addBook(User.SUser storage _u, string _bookName) internal {
-        _u.books.push(AccountBook.Book(_bookName));
+        // _u.books.push(AccountBook.Book(_bookName));
     }
 }

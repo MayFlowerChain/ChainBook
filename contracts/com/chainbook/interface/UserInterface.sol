@@ -10,18 +10,19 @@ contract UserInterface is UserFactory {
     }
 
     function getUserBooksByOpenIdAndBookIndex(string openid, uint index) public view returns(string) {
-        return users[openid].books[index].bookName;
+        return "";
+        // return users[openid].books[index].bookName;
     }
 
     function getUserBookNumsByOpenId(string openid) public view returns(uint256) {
         return users[openid].books.length;
     }
 
-    function getUserBooksByOpenId(string openid) public returns(string[10]) {
+    function getUserBooksByOpenId(string openid) public view returns(string[10]) {
         User.SUser storage user = users[openid];
-        string[10] arrays;
+        string[10] memory arrays;
         for(uint i = 0;i < user.books.length; i++) {
-            arrays[i] = user.books[i].bookName;
+            // arrays[i] = user.books[i].bookName;
         }
         return arrays;
     }
