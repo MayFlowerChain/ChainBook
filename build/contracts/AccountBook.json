@@ -1,14 +1,14 @@
 {
   "contractName": "AccountBook",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50604380601d6000396000f3006080604052600080fd00a265627a7a723058203ce3581cad0ed1843d53d91bd37897427ba65071295024ec04c6b9c99cc5e6986c6578706572696d656e74616cf50037",
-  "deployedBytecode": "0x6080604052600080fd00a265627a7a723058203ce3581cad0ed1843d53d91bd37897427ba65071295024ec04c6b9c99cc5e6986c6578706572696d656e74616cf50037",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604380601d6000396000f3006080604052600080fd00a265627a7a7230582064cc3773d922f2f5ca4a91e3175fe4f1ab4d5eb03b11128ab1e4f9e73a8e480c6c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x6080604052600080fd00a265627a7a7230582064cc3773d922f2f5ca4a91e3175fe4f1ab4d5eb03b11128ab1e4f9e73a8e480c6c6578706572696d656e74616cf50037",
   "sourceMap": "60:73:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:73:0;;;;;;;",
   "deployedSourceMap": "60:73:0:-;;;;;",
   "source": "pragma solidity ^0.4.20;\npragma experimental ABIEncoderV2;\n\ncontract AccountBook {\n    struct Book {\n        string bookName;\n    }\n}",
-  "sourcePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+  "sourcePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/AccountBook.sol",
   "ast": {
-    "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+    "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/AccountBook.sol",
     "exportedSymbols": {
       "AccountBook": [
         6
@@ -95,7 +95,7 @@
     "src": "0:133:0"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+    "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/AccountBook.sol",
     "exportedSymbols": {
       "AccountBook": [
         6
@@ -187,5 +187,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-22T10:27:14.044Z"
+  "updatedAt": "2018-10-08T13:34:23.041Z"
 }

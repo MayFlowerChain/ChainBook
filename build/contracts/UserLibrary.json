@@ -1,14 +1,14 @@
 {
   "contractName": "UserLibrary",
   "abi": [],
-  "bytecode": "0x605a602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a265627a7a72305820227661bbadeab87eb2d0e0db7229e28c4f97511352e7a5d276777cb5762c7c256c6578706572696d656e74616cf50037",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a265627a7a72305820227661bbadeab87eb2d0e0db7229e28c4f97511352e7a5d276777cb5762c7c256c6578706572696d656e74616cf50037",
+  "bytecode": "0x605a602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a265627a7a72305820075d28d4bb4daca0b2ed0945933d7ae73417055f44bd360a7bf7fe14bd8e45a16c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a265627a7a72305820075d28d4bb4daca0b2ed0945933d7ae73417055f44bd360a7bf7fe14bd8e45a16c6578706572696d656e74616cf50037",
   "sourceMap": "117:160:4:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
   "deployedSourceMap": "117:160:4:-;;;;;;;;",
   "source": "pragma solidity ^0.4.20;\npragma experimental ABIEncoderV2;\n\nimport './AccountBook.sol';\nimport './UserFactory.sol';\n\nlibrary UserLibrary {\n    function addBook(UserFactory.User storage _u, string _bookName) internal {\n        _u.books.push(AccountBook.Book(_bookName));\n    }\n}\n",
-  "sourcePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/UserLibrary.sol",
+  "sourcePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/UserLibrary.sol",
   "ast": {
-    "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/UserLibrary.sol",
+    "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/UserLibrary.sol",
     "exportedSymbols": {
       "UserLibrary": [
         233
@@ -38,7 +38,7 @@
         "src": "25:33:4"
       },
       {
-        "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+        "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/AccountBook.sol",
         "file": "./AccountBook.sol",
         "id": 212,
         "nodeType": "ImportDirective",
@@ -49,7 +49,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/UserFactory.sol",
+        "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/UserFactory.sol",
         "file": "./UserFactory.sol",
         "id": 213,
         "nodeType": "ImportDirective",
@@ -308,7 +308,7 @@
     "src": "0:278:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/UserLibrary.sol",
+    "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/UserLibrary.sol",
     "exportedSymbols": {
       "UserLibrary": [
         233
@@ -338,7 +338,7 @@
         "src": "25:33:4"
       },
       {
-        "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/AccountBook.sol",
+        "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/AccountBook.sol",
         "file": "./AccountBook.sol",
         "id": 212,
         "nodeType": "ImportDirective",
@@ -349,7 +349,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/gaowenfeng/project/solidity/chainbook/contracts/UserFactory.sol",
+        "absolutePath": "/Users/gaowenfeng/project/solidity/ChainBook/contracts/UserFactory.sol",
         "file": "./UserFactory.sol",
         "id": 213,
         "nodeType": "ImportDirective",
@@ -613,5 +613,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-22T10:27:14.045Z"
+  "updatedAt": "2018-10-08T13:34:23.042Z"
 }
