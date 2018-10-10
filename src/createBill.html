@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AccountBook</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="tabbable" id="tabs-35023">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#panel-737285" data-toggle="tab">支出</a>
+                    </li>
+                    <li>
+                        <a href="#panel-639101" data-toggle="tab">收入</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="panel-639101">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="income_amount" class="col-sm-2 control-label">金额</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="income_amount"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label  class="btn btn-info">
+                                            <input  value="5" type="radio" name="income_category"> 工资
+                                        </label>
+                                        <label  class="btn btn-info">
+                                            <input  value="6" type="radio" name="income_category"> 红包
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" onclick="inCome()" class="btn btn-default">提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane active" id="panel-737285">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="expend_amount" class="col-sm-2 control-label">金额</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="expend_amount"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label  class="btn btn-info">
+                                            <input  value="0" type="radio" name="expend_category"> 吃喝
+                                        </label>
+                                        <label  class="btn btn-info">
+                                            <input  value="1" type="radio" name="expend_category"> 交通
+                                        </label>
+                                        <label  class="btn btn-info">
+                                            <input  value="2" type="radio" name="expend_category"> 日用
+                                        </label>
+                                        <label  class="btn btn-info">
+                                            <input  value="3" type="radio" name="expend_category"> 其他
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button  type="button" onclick="expends()" class="btn btn-default">提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--&lt;!&ndash; jQuery (necessary for Bootstrap's JavaScript plugins) &ndash;&gt;-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--&lt;!&ndash; Include all compiled plugins (below), or include individual files as needed &ndash;&gt;-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/createBill.js"></script>
+</body>
+</html>
