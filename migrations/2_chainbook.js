@@ -1,7 +1,6 @@
-var UserInterface = artifacts.require("UserInterface");
+var AccountBookHelper = artifacts.require("AccountBookHelper");
 // var B= artifacts.require("B");
 
 module.exports = function(deployer) {
-  deployer.deploy(UserInterface);
-  // deployer.deploy(B);
+  deployer.deploy(AccountBookHelper);
 };
