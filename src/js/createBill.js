@@ -1,6 +1,7 @@
 App = {
     web3Provider: null,
     contracts: {},
+    account: null,
 
     init: function () {
 
@@ -12,8 +13,10 @@ App = {
          * Replace me...
          */
         if (typeof web3 !== 'undefined') {
+            console.log("metamask")
             App.web3Provider = web3.currentProvider;
         } else {
+            console.log("other")
             // Set the provider you want from Web3.providers
             App.web3Provider = new Web3.providers.HttpProvider("http://localhost:7545");
         }
@@ -30,12 +33,20 @@ App = {
             App.contracts.AccountBook = TruffleContract(AccountBook);
             // 为TruffleContract设置Provider
             App.contracts.AccountBook.setProvider(App.web3Provider);
+            web3.eth.getAccounts(function (err, accounts) {
+                App.account = accounts[7]
+            });
         })
     },
 
     createBill: function (amount, primaryCategory, secondaryCategory) {
         App.contracts.AccountBook.deployed().then(function (instance) {
-            return instance.createBill(amount, primaryCategory, secondaryCategory, {from: '0x65219A4Fe427c8Ba040764Bd709d4Cd94B9CB056'})
+            var gasPrice = web3.eth.gasPrice;
+            console.log(gasPrice.toString(10))
+            return instance.createBill(amount, primaryCategory, secondaryCategory, {
+                from: App.account,
+                gas:3000000
+            })
         }).then(function () {
             alert("添加成功")
             window.location.href = "./index.html"

@@ -1,6 +1,7 @@
 App = {
     web3Provider: null,
     contracts: {},
+    account: null,
 
     init: function () {
 
@@ -30,10 +31,17 @@ App = {
             App.contracts.AccountBook = TruffleContract(AccountBook);
             // 为TruffleContract设置Provider
             App.contracts.AccountBook.setProvider(App.web3Provider);
+            web3.eth.getAccounts(function(err, accounts){
+                App.account = accounts[7]
+            });
+            setTimeout(function () {
+                console.log(App.account)
+                App.getBillsByOwner();
+                App.getAccountBookSummaryByStartTimeAndEndTime();
+            },100)
 
 
-            App.getBillsByOwner();
-            App.getAccountBookSummaryByStartTimeAndEndTime();
+
         })
         return App.bindEvents();
     },
@@ -49,14 +57,19 @@ App = {
         //     var account = accounts[0]
         //     console.log(account);
         // })
+
+
         App.contracts.AccountBook.deployed().then(function (instance) {
 
-            return instance.getBillsByOwner({from: '0x65219A4Fe427c8Ba040764Bd709d4Cd94B9CB056'});
+            return instance.getBillsByOwner({from: App.account});
         }).then(function (ids) {
+            // console.log(JSON.parse(JSON.stringify(ids)))
             html = "";
             for (id of ids) {
-                // console.log(JSON.parse(JSON.stringify(id)));
                 (function (id) {
+                    id = JSON.parse(JSON.stringify(id));
+                    console.log(id);
+
                     App.contracts.AccountBook.deployed().then(function (instance) {
                         return instance.bills(id)
                     }).then(function (result) {
@@ -99,11 +112,10 @@ App = {
         expend = 0
         App.contracts.AccountBook.deployed().then(function (instance) {
 
-            return instance.getAccountBookSummaryByStartTimeAndEndTime(1539090455, 1549190455, {from: '0x65219A4Fe427c8Ba040764Bd709d4Cd94B9CB056'});
+            return instance.getAccountBookSummaryByStartTimeAndEndTime(1539090455, 1549190455, {from: App.account});
         }).then(function (ids) {
             income = JSON.parse(JSON.stringify(ids))[0];
             expend = JSON.parse(JSON.stringify(ids))[1];
-
         }).catch(function (err) {
             console.log(err.message);
         })

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5981372-76a2-4e15-9f35-28bb432d11f2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/createBill.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/js/createBill.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/build/contracts/AccountBookFactory.json" afterPath="$PROJECT_DIR$/build/contracts/AccountBookFactory.json" />
       <change beforePath="$PROJECT_DIR$/build/contracts/AccountBookHelper.json" afterPath="$PROJECT_DIR$/build/contracts/AccountBookHelper.json" />
       <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/createBill.js" afterPath="$PROJECT_DIR$/src/js/createBill.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +23,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="101" column="86" lean-forward="false" selection-start-line="101" selection-start-column="86" selection-end-line="101" selection-end-column="86" />
+            <state relative-caret-position="452">
+              <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -46,7 +43,7 @@
       <file leaf-file-name="createBill.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/createBill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="426">
               <caret line="84" column="96" lean-forward="false" selection-start-line="84" selection-start-column="96" selection-end-line="84" selection-end-column="96" />
               <folding />
             </state>
@@ -56,8 +53,8 @@
       <file leaf-file-name="createBill.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/createBill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="37" column="133" lean-forward="false" selection-start-line="37" selection-start-column="91" selection-end-line="37" selection-end-column="133" />
+            <state relative-caret-position="504">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,6 +65,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
               <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountBookHelper.sol" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contracts/AccountBookHelper.sol">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -230,12 +237,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539092691033</updated>
       <workItem from="1539092693309" duration="8035000" />
-      <workItem from="1539149188080" duration="2500000" />
+      <workItem from="1539149188080" duration="6948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10535000" />
+    <option name="totallyTimeSpent" value="14983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="42" width="1400" height="837" extended-state="0" />
@@ -296,14 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="106" column="10" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/AccountBookFactory.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -312,26 +311,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/AccountBookHelper.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/createBill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="426">
           <caret line="84" column="96" lean-forward="false" selection-start-line="84" selection-start-column="96" selection-end-line="84" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="106" column="10" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/createBill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="37" column="133" lean-forward="false" selection-start-line="37" selection-start-column="91" selection-end-line="37" selection-end-column="133" />
+        <state relative-caret-position="504">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="101" column="86" lean-forward="false" selection-start-line="101" selection-start-column="86" selection-end-line="101" selection-end-column="86" />
+        <state relative-caret-position="452">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding />
         </state>
       </provider>
