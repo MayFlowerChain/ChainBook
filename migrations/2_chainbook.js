@@ -3,5 +3,4 @@ var AccountBookHelper = artifacts.require("AccountBookHelper");
 
 module.exports = function(deployer) {
   deployer.deploy(AccountBookHelper);
-  // deployer.deploy(B);
 };
