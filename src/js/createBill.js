@@ -2,6 +2,7 @@ App = {
     web3Provider: null,
     contracts: {},
     account: null,
+    openid: '123',
 
     init: function () {
 
@@ -33,9 +34,24 @@ App = {
             App.contracts.AccountBook = TruffleContract(AccountBook);
             // 为TruffleContract设置Provider
             App.contracts.AccountBook.setProvider(App.web3Provider);
-            web3.eth.getAccounts(function (err, accounts) {
-                App.account = accounts[7]
-            });
+
+            account = GetQueryString("address")
+            if (account!=null&&account.length>0) {
+                console.log(account)
+                App.account = account
+            }
+        })
+    },
+
+    register: function (openid) {
+        return App.contracts.AccountBook.deployed().then(function (instance) {
+            // 创建新账户
+            newAccount = web3.personal.newAccount(openid)
+            // 解锁
+            web3.personal.unlockAccount(newAccount, openid, 100000000)
+            // 转账
+            web3.eth.sendTransaction({from: web3.eth.accounts[0], to: newAccount, value: web3.toWei(1)})
+            return newAccount
         })
     },
 
@@ -45,7 +61,7 @@ App = {
             console.log(gasPrice.toString(10))
             return instance.createBill(amount, primaryCategory, secondaryCategory, {
                 from: App.account,
-                gas:3000000
+                gas: 3000000
             })
         }).then(function () {
             alert("添加成功")
@@ -75,32 +91,16 @@ function expends() {
 }
 
 
-//参数n为休眠时间，单位为毫秒:
-function sleep(n) {
-    var start = new Date().getTime();
-    //  console.log('休眠前：' + start);
-    while (true) {
-        if (new Date().getTime() - start > n) {
-            break;
-        }
-    }
-    // console.log('休眠后：' + new Date().getTime());
-}
-
-function timestampToTime(timestamp) {
-    var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
-    var Y = date.getFullYear() + '-';
-    var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-    var D = date.getDate() + ' ';
-    return Y + M + D;
-}
-
-function primaryCategory(i) {
-    if (i == 0) {
-        return "收入"
-    } else if (i == 1) {
-        return "支出"
-    }
+/**
+ * 获取URL参数
+ * @param 参数名
+ * @returns 参数值
+ */
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return decodeURI(r[2]);
+    return null;
 }
 
 function SecondaryCategory(i) {

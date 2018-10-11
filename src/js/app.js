@@ -2,6 +2,7 @@ App = {
     web3Provider: null,
     contracts: {},
     account: null,
+    openid: '1234',
 
     init: function () {
 
@@ -31,23 +32,37 @@ App = {
             App.contracts.AccountBook = TruffleContract(AccountBook);
             // 为TruffleContract设置Provider
             App.contracts.AccountBook.setProvider(App.web3Provider);
-            web3.eth.getAccounts(function(err, accounts){
-                App.account = accounts[7]
-            });
-            setTimeout(function () {
+            // 根据openid获取address
+            App.contracts.AccountBook.deployed().then(function (instance) {
+                return instance.openidToOwner(App.openid)
+            }).then(function (address) {
+                if (address == 0) {
+                    console.log('未注册，现在注册')
+                    App.account = App.register(App.openid)
+                } else {
+                    console.log('已经注册')
+                    App.account = address
+                }
+                // 初始化资源
                 console.log(App.account)
-                App.getBillsByOwner();
                 App.getAccountBookSummaryByStartTimeAndEndTime();
-            },100)
-
-
-
+                App.getBillsByOwner();
+            })
         })
-        return App.bindEvents();
     },
 
-    bindEvents: function () {
-        $(document).on('click', '.btn-adopt', App.handleAdopt);
+    register: function (openid) {
+        // 创建新账户
+        newAccount = web3.personal.newAccount(openid)
+        // 解锁
+        web3.personal.unlockAccount(newAccount, openid, 100000000)
+        // 转账
+        web3.eth.sendTransaction({from: web3.eth.accounts[0], to: newAccount, value: web3.toWei(1)})
+        App.contracts.AccountBook.deployed().then(function (instance) {
+            instance.createUser(openid, {from: newAccount})
+        })
+
+        return newAccount
     },
 
 
@@ -189,7 +204,7 @@ function SecondaryCategory(i) {
 }
 
 function createBill() {
-    window.location.href = './createBill.html'
+    window.location.href = './createBill.html?address='+App.account
 }
 
 

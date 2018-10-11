@@ -24,8 +24,15 @@ contract AccountBookFactory {
     
     Bill[] public bills;
     
+    mapping (bytes32 => address) public openidToOwner;
     mapping (uint => address) public billToOwner;
     mapping (address => uint) ownerBillCount;
+
+
+    function createUser(bytes32 _openid) public
+    {
+       openidToOwner[_openid] = msg.sender;
+    }
     
     function createBill(
         uint _amount,
